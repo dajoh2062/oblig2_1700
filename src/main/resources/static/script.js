@@ -145,7 +145,7 @@ function visbiletter() {
 
             const li = document.createElement("li");
             li.textContent =
-                "Billett " +
+                "Billett" +
                 (indeks + 1) +
                 ": " +
                 bilett.film +
@@ -159,6 +159,7 @@ function visbiletter() {
                 bilett.telefonnummer +
                 ") antall: " +bilett.antall
             ;
+            li.classList.add("list-group-item");
             billetListe.appendChild(li);
         }
 
