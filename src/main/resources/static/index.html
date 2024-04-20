@@ -1,0 +1,82 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Kino</title>
+    <!-- Linker til js fil i samme mappe-->
+
+
+</head>
+<body>
+<h1>Bestilling av kinobiletter</h1>
+<!-- lager film drop down -->
+<form>
+    <label for="velgFilm"><b>Velg Film:</b></label>
+    <select id="velgFilm">
+        <option disabled selected>Velg Film</option>
+        <option>Shawshank redemption</option>
+        <option>Drive</option>
+        <option>The Silence of the Lambs</option>
+    </select>
+    <br><br>
+
+    <div>
+        <!-- antall biletter, 1 eller større -->
+        <label for="antall"><b>Antall:</b></label>
+        <input type="number" id="antall" min="1" max="15" >
+        <span id="antallError"></span>
+    </div>
+    <br>
+
+    <div>
+        <!-- Fornavn input med responsiv validering -->
+        <label for="fornavn"><b>Fornavn:</b></label>
+        <input type="text" id="fornavn" >
+        <span id="fornavnError" ></span>
+    </div>
+    <br>
+
+    <div>
+        <!-- etternavn input med responsiv validering -->
+        <label for="etternavn"><b>Etternavn:</b></label>
+        <input type="text" id="etternavn"  >
+        <span id="etternavnError" ></span>
+    </div>
+    <br>
+
+    <div>
+        <!-- telefon input med responsiv validering -->
+        <label for="telefon"><b>Telefonnummer:</b></label>
+        <input type="text" id="telefon" >
+        <span id="telefonError" ></span>
+    </div>
+    <br>
+
+    <div>
+        <!-- email input med responsiv validering -->
+        <label for="email"><b>Email:</b></label>
+        <input type="text" id="email">
+        <span id="emailError" ></span>
+    </div>
+    <br>
+</form>
+<!-- caller javascript funksjonen "kjopbilett" -->
+<button id="kjop">Kjøp billett</button>
+
+<!-- liste med nåværende biletter-->
+<h2>Alle billetter</h2>
+<ul id="biletter"></ul>
+
+<!-- slette bilettene i listen ovenfor-->
+<button onclick="slettBiletter()">Slett alle billettene</button>
+<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
+<script src="script.js"></script>
+</body>
+
+</html>
+
+
+
+
